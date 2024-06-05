@@ -1,0 +1,23 @@
+# Define the questions and answers
+questions = [
+    {"question": "What is the capital of France?", "answers": {"A": "Paris", "B": "London", "C": "Berlin", "D": "Rome"}, "correct": "A"},
+    {"question": "Which planet is known as the Red Planet?", "answers": {"A": "Earth", "B": "Mars", "C": "Jupiter", "D": "Saturn"}, "correct": "B"},
+    {"question": "Who painted the Mona Lisa?", "answers": {"A": "Leonardo da Vinci", "B": "Michelangelo", "C": "Raphael", "D": "Caravaggio"}, "correct": "A"},
+    {"question": "What is the largest planet in our solar system?", "answers": {"A": "Earth", "B": "Saturn", "C": "Jupiter", "D": "Uranus"}, "correct": "C"},
+    {"question": "Which of the following is NOT a primary color?", "answers": {"A": "Red", "B": "Blue", "C": "Yellow", "D": "Green"}, "correct": "D"}
+]
+# Initialize score
+score = 0
+# Play the game
+for question in questions:
+    print(question["question"])
+    for option, answer in question["answers"].items():
+        print(f"{option}: {answer}")
+    user_answer = input("Enter your answer (A, B, C, D): ")
+    if user_answer.upper() == question["correct"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Sorry, the correct answer is {question['correct']}")
+# Display final score
+print(f"Your final score is {score} out of {len(questions)}")
