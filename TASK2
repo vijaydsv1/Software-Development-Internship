@@ -1,0 +1,12 @@
+def generate_pyramid_pattern(n):
+    for i in range(1, n + 1):
+        # Print leadi spacesng
+        for j in range(n - i):
+            print(" ", d=" ")
+        # Print numbersen
+        for k in range(1, i + 1):
+            print(k, end=" ")
+        print()  # Move to the next line
+
+# Generate and print the pyramid pattern
+generate_pyramid_pattern(5)
